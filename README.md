@@ -11,3 +11,7 @@ Weights and Biases Report Uploaded in the main branch with the filename "W&B Rep
 ### inference.py: This program runs the predictions using the trained BERT Model (4th epoch: checkpoint-20952) on the complete dataset on a single GPU for a test dataset of 25141 records. The total time taken was 3.12 minutes.
 ![image](https://github.com/abhijit57/News_Category_Classification/assets/44730823/4e14f03c-c489-4222-a3f5-737d8d182302)
 
+### optimized_inference.py: This program runs the predictions using the trained BERT model on the complete test dataset on 4 GPUs and the total time taken was 2.06 minutes. It used multi-gpu inferencing compared to the previous inference process. This highlights a speedup factor of 66%
+![image](https://github.com/abhijit57/News_Category_Classification/assets/44730823/624c540a-5cfa-44b5-9720-eebc64bcce35)
+
+
