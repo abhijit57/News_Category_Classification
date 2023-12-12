@@ -11,10 +11,21 @@ Weights and Biases Report Uploaded in the main branch with the filename "W&B Rep
 ### inference.py: This program runs the predictions using the trained BERT Model (4th epoch: checkpoint-20952) on the complete dataset on a single GPU for a test dataset of 25141 records. The total time taken was 3.12 minutes.
 ![image](https://github.com/abhijit57/News_Category_Classification/assets/44730823/4e14f03c-c489-4222-a3f5-737d8d182302)
 
-### optimized_inference.py: This program runs the predictions using the trained BERT model on the complete test dataset on 4 GPUs and the total time taken was 2.06 minutes. It used multi-gpu inferencing compared to the previous inference process. This highlights a speedup factor of 66%
+### optimized_inference.py: This program runs the predictions using the trained BERT model on the complete test dataset on 4 GPUs and the total time taken was 2.06 minutes. It used multi-gpu inferencing compared to the previous inference process. This highlights a speedup factor of 33%.
 ![image](https://github.com/abhijit57/News_Category_Classification/assets/44730823/624c540a-5cfa-44b5-9720-eebc64bcce35)
 
 ### Run both the programs using respective commands: python inference.py, python optimized_inference.py
+
+### Flask App: The templates folder contains the index.html file. app.py python script uses the index.html file to render a simple UI to perform news category text classification by taking a text box input and providing the category class as the prediction. Run the flask app: python app.py and click on the URL provided in the console.
+
+
+#### Application Execution Order:
+1) Clone the repo, create virtual environment preferably conda, load all the libraries mentioned in the requirements.txt file. Activate the virtual environment and execute the below mentioned files.
+2) data_preparation.py (can be skipped, if you want to run the text classification script directly from the csv files. Run this file only if you want to read it from the txt file, perform data consistency checks and train, test splits).
+3) text_classification.py
+4) inference.py
+5) optimized_inference.py
+6) app.py
 
 
 
